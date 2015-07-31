@@ -1,0 +1,158 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:700);
+
+body {
+    position: relative;
+    color: #FB503B;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+a, p, div {
+    color: #FB503B;
+}
+button:focus,
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+img {
+    max-width: 100%;
+}
+input, textarea, select {
+    color: #000;
+}
+
+/* HEADER */
+#wrapper header {
+    padding: 5px 0;
+    border-bottom: 2px solid #ddd;
+}
+#logo img {
+    max-width: 50px;
+    width: 100%;
+}
+#main-navigation {
+    margin-top: 5px;
+}
+#footer-navigation ul,
+#main-navigation ul {
+    margin: 0;
+    padding: 0;
+}
+#footer-navigation ul li,
+#main-navigation ul li {
+    display: inline-block;
+    margin: 3px;
+}
+#footer-navigation ul li a,
+#main-navigation ul li a {
+    display: block;
+    padding: 5px;
+    font-size: 1.2em;
+}
+
+/* FRONT PAGE */
+#landing-view h1 {
+    font-size: 5em;
+    margin-top: 50px;
+}
+#browser {
+    margin-top: 60px;
+}
+
+.block {
+    margin-top: 50px;
+    border-top: 2px solid #ddd;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.block .block-title {
+    margin-bottom: 50px;
+    font-size: 3.2em;
+}
+
+/* COMPONENT SECTION */
+.component-item {
+    margin: 10px;
+    padding: 25px;
+    border: 1px solid #ddd;
+    height: 210px;
+    overflow: auto;
+}
+.component-icon {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.component-icon i.fa {
+    font-size: 5em;
+}
+.component-description {
+    text-align: center;
+}
+.component-steps {
+    margin-top: 30px;
+}
+.component-steps img {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* DOCS LINK CTA */
+#go-to-docs {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+#go-to-docs a {
+    font-size: 2.5em;
+}
+
+/* FOOTER */
+#footer {
+    background-color: #FB503B;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#footer a,
+#footer p {
+    color: #fff;
+}
+
+/* DOCUMENTATION */
+.big-title {
+    background-color: #FB503B;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 2em;
+}
+.big-title .container {
+    color: #fff;
+}
+.documentation-page-content h1 {
+    margin-bottom: 50px;
+    text-decoration: underline;
+}
+.documentation-left {
+    padding: 15px;
+}
+.documentation-right {
+    min-height: 500px;
+    padding: 15px;
+    border-left: 1px solid #ddd;
+}
+.documentation-wrap h3 {
+    margin-bottom: 20px;
+}
+.documentation-wrap ul li {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+#installation-steps li.installation-step {
+    margin-bottom: 30px;
+    border-top: 1px solid #ddd;
+}
+.video-hold iframe {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+}
