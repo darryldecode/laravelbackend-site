@@ -14,7 +14,7 @@
             <p>On your composer.json, add this on require block:</p>
             <pre>
 "require": {
-        "darryldecode/laravelbackend": "~0.1"
+        "darryldecode/laravelbackend": "~1.0"
     }
             </pre>
             <p>then you can do: <pre>composer update "darryldecode/laravelbackend"</pre> to update/install the package</p>
