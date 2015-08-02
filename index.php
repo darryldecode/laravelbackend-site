@@ -57,7 +57,7 @@
 
     <div class="row block block-1" id="features">
         <div class="container">
-            <h2 class="text-center">Do you love how WordPress works? But want to use Laravel instead?</h2>
+            <h2 class="text-center">FLEXIBLE + EXTENSIBLE CONTENT BUILDER</h2>
             <h4 class="text-center">Laravel Backend is designed to easily build any type of content, whether it is a Blog, Page, Product or anything you can imagine!</h4>
             <br>
             <br>
