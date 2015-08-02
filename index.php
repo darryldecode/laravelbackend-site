@@ -12,7 +12,7 @@
     <link href="plugins/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="plugins/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="resources/main.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="resources/images/favicon.png">
+    <link rel="icon" type="image/png" href="/resources/images/favicon.png">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,6 +43,11 @@
             <div id="landing-view">
                 <h1 class="text-center">LARAVEL BACKEND</h1>
                 <h3 class="text-center">Boost your Laravel 5.1~ Website/Web Application Development by providing lite and lean API-Driven backend.</h3>
+                <div class="text-center">
+                    <div style="width: 450px;margin: 0 auto;">
+<pre><code data-language="php">composer require darryldecode/laravelbackend:~1.0</code></pre>
+                    </div>
+                </div>
                 <div id="browser">
                     <img src="resources/images/ss1.png">
                 </div>
@@ -177,6 +182,9 @@
 <script src="plugins/jquery.nicescroll.min.js"></script>
 <script src="plugins/jquery.typeanimate.js"></script>
 <script src="plugins/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+<script src="/plugins/rainbow-master/js/rainbow.min.js"></script>
+<script src="/plugins/rainbow-master/js/language/generic.js"></script>
+<script src="/plugins/rainbow-master/js/language/php.js"></script>
 <script src="resources/main.js"></script>
 
 <script>

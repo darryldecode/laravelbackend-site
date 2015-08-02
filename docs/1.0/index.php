@@ -12,6 +12,7 @@
     <link href="../../plugins/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../../plugins/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="../../resources/main.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/resources/images/favicon.png">
 
     <!-- rainbow -->
     <link href="../../plugins/rainbow-master/themes/twilight.css" rel="stylesheet" type="text/css">
