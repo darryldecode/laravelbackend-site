@@ -116,6 +116,7 @@ $result = $this->dispatchFromArray(
     'Darryldecode\Backend\Components\ContentBuilder\Commands\QueryContentCommand',
     array(
         'id' => 1,
+        'disablePermissionChecking' => true // mandatory
     )
 );
 
@@ -124,6 +125,7 @@ $result = $this->dispatchFromArray(
     'Darryldecode\Backend\Components\ContentBuilder\Commands\QueryContentCommand',
     array(
         'slug' => 'some-entry-2',
+        'disablePermissionChecking' => true // mandatory
     )
 );
 
@@ -132,6 +134,7 @@ $result = $this->dispatchFromArray(
     'Darryldecode\Backend\Components\ContentBuilder\Commands\QueryContentCommand',
     array(
         'title' => 'Some Title',
+        'disablePermissionChecking' => true // mandatory
     )
 );
 
