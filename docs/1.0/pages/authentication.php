@@ -51,6 +51,25 @@ $this->middleware('backend.authenticated');
 $this->middleware('backend.guest');
 </code></pre>
 
+    <h3>Backend Authentication Event Hooks:</h3>
+    <table class="table">
+        <tr>
+            <th>EVENT:</th>
+            <th>PARAMETERS PASSED:</th>
+            <th>DESCRIPTION:</th>
+        </tr>
+        <tr>
+            <td><pre>backend.auth.success</pre></td>
+            <td><b>Param 1</b>: User Object</td>
+            <td>This event is triggered after successful authentication on backend and before any redirection.</td>
+        </tr>
+        <tr>
+            <td><pre>backend.auth.logut</pre></td>
+            <td><b>Param</b>: N/A</td>
+            <td>This event is triggered after successful logout on backend and before any redirection.</td>
+        </tr>
+    </table>
+
     <div class="alert alert-warning">
         More documentation coming soon.
     </div>
