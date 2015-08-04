@@ -41,6 +41,16 @@ $result->getStatusCode(); // the status code Ex 200, 401
 $result->getMessage(); // the message (success or error)
     </code></pre>
 
+    <h3>Built-in Middleware:</h3>
+    <p>On your controller:</p>
+<pre><code data-language="php">
+// if you want it for authenticated users only
+$this->middleware('backend.authenticated');
+
+// if you want it for non-authenticated users only
+$this->middleware('backend.guest');
+</code></pre>
+
     <div class="alert alert-warning">
         More documentation coming soon.
     </div>
