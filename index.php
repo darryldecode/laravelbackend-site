@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Darryl Fernandez">
+    <meta name="description" content="Laravel Backend - Lite and lean backend for laravel.">
+    <meta name="keywords" content="laravelbackend, laravel, laravel admin package, laravel backend package, php, framework, web, artisans, darryl fernandez">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Laravel Backend</title>
 
