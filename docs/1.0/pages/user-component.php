@@ -12,6 +12,7 @@
                 <li><a href="" class="go-to" data-go-to="creating-a-user">Creating a user</a></li>
                 <li><a href="" class="go-to" data-go-to="updating-a-user">Updating a user</a></li>
                 <li><a href="" class="go-to" data-go-to="deleting-a-user">Deleting a user</a></li>
+                <li><a href="" class="go-to" data-go-to="extending">Extending User Model</a></li>
             </ul>
         </li>
     </ul>
@@ -185,4 +186,59 @@ $result = $this->dispatchFromArray(
     )
 );
     </code></pre>
+
+    <h3 id="extending">Extending User Model</h3>
+    <p>There are cases you want to extend the User's Model like adding new relations to it. To do that, follow steps below:</p>
+    <p><b>STEP 1.)</b></p>
+    <p>Navigate to <b><i>"config/backend/backend.php"</i></b> config file. Open that file and you will see on config array that looks like this:</p>
+<pre><code data-language="php">
+        /*
+        * built-in component models being used
+        *
+        * NOTE:
+        *
+        * The purpose of this is for extensibility, if you want to extend relationships for user/content model
+        * you can change this to your own and make sure to extend this models
+        */
+        'user_model'    => 'Darryldecode\Backend\Components\User\Models\User',
+        'content_model' => 'Darryldecode\Backend\Components\ContentBuilder\Models\Content',
+    </code></pre>
+    <p>You will see above we have this two currently used models, Change it to your new model and make sure to extend it, like this:</p>
+<pre><code data-language="php">
+namespace App\Backend\Extensions;
+
+use Darryldecode\Backend\Components\User\Models\User;
+
+// your new class, name it whatever you want and just make sure you extent the main User Model
+class UserExtended extends User {
+
+    // your new added relations to the Content Model
+    public function newAddedRelation() {
+        return $this->belongsToMany('anything here..');
+    }
+}
+</code></pre>
+    <p>After you have created your new User Model, make sure to update the backend config file, like so:</p>
+<pre><code data-language="php">
+        /*
+        * built-in component models being used
+        *
+        * NOTE:
+        *
+        * The purpose of this is for extensibility, if you want to extend relationships for user/content model
+        * you can change this to your own and make sure to extend this models
+        */
+        'user_model'    => 'App\Backend\Extensions\UserExtended', // <-- your new User Model
+        'content_model' => 'Darryldecode\Backend\Components\ContentBuilder\Models\Content',
+    </code></pre>
+
+    <p><b>VOILA!</b> You have now full control of your User's Model! When querying user, you can now add querying its relations like so,</p>
+<pre><code data-language="php">
+$result = $this->dispatchFromArray(
+    'Darryldecode\Backend\Components\User\Commands\QueryUsersCommand',
+    array(
+        'with' => array('newAddedRelation'), // <-- include your new relation
+    )
+);
+</code></pre>
 </div>

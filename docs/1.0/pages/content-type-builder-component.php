@@ -12,6 +12,7 @@
                 <li><a href="" class="go-to" data-go-to="create-content">Creating content</a></li>
                 <li><a href="" class="go-to" data-go-to="updating-content">Updating content</a></li>
                 <li><a href="" class="go-to" data-go-to="delete-content">Deleting content</a></li>
+                <li><a href="" class="go-to" data-go-to="extending">Extending Content Model</a></li>
             </ul>
         </li>
     </ul>
@@ -93,6 +94,7 @@ $result = $this->dispatchFromArray(
         'disablePermissionChecking' => true, // this is mandatory when using built-in commands so it will ignore permission checking!
         'startDate' => '2015-10-10', // query date range
         'endDate' => '2015-10-12', // query date range
+        'with' => array(), // relations
         'queryHook' => function($query) {
 
             // add query here
@@ -116,6 +118,7 @@ $result = $this->dispatchFromArray(
     'Darryldecode\Backend\Components\ContentBuilder\Commands\QueryContentCommand',
     array(
         'id' => 1,
+        'with' => array(), // relations
         'disablePermissionChecking' => true // mandatory
     )
 );
@@ -125,6 +128,7 @@ $result = $this->dispatchFromArray(
     'Darryldecode\Backend\Components\ContentBuilder\Commands\QueryContentCommand',
     array(
         'slug' => 'some-entry-2',
+        'with' => array(), // relations
         'disablePermissionChecking' => true // mandatory
     )
 );
@@ -134,6 +138,7 @@ $result = $this->dispatchFromArray(
     'Darryldecode\Backend\Components\ContentBuilder\Commands\QueryContentCommand',
     array(
         'title' => 'Some Title',
+        'with' => array(), // relations
         'disablePermissionChecking' => true // mandatory
     )
 );
@@ -212,4 +217,67 @@ $result = $this->dispatchFromArray(
     )
 );
     </code></pre>
+
+    <h3 id="extending">Extending Content Model</h3>
+    <p>There are cases you want to extend the Content's Model like adding new relations to it. To do that, follow steps below:</p>
+    <p><b>STEP 1.)</b></p>
+    <p>Navigate to <b><i>"config/backend/backend.php"</i></b> config file. Open that file and you will see on config array that looks like this:</p>
+<pre><code data-language="php">
+/*
+* built-in component models being used
+*
+* NOTE:
+*
+* The purpose of this is for extensibility, if you want to extend relationships for user/content model
+* you can change this to your own and make sure to extend this models
+*/
+'user_model'    => 'Darryldecode\Backend\Components\User\Models\User',
+'content_model' => 'Darryldecode\Backend\Components\ContentBuilder\Models\Content',
+</code></pre>
+    <p>You will see above we have this two currently used models, Change it to your new model and make sure to extend it, like this:</p>
+<pre><code data-language="php">
+namespace App\Backend\Extensions;
+
+use Darryldecode\Backend\Components\ContentBuilder\Models\Content;
+
+// your new class, name it whatever you want and just make sure you extent the main Content Model
+class ContentExtended extends Content {
+
+    // your new added relations to the Content Model
+    public function newAddedRelation() {
+        return $this->belongsToMany('anything here..');
+    }
+}
+</code></pre>
+    <p>After you have created your new Content Model, make sure to update the backend config file, like so:</p>
+<pre><code data-language="php">
+    /*
+    * built-in component models being used
+    *
+    * NOTE:
+    *
+    * The purpose of this is for extensibility, if you want to extend relationships for user/content model
+    * you can change this to your own and make sure to extend this models
+    */
+    'user_model'    => 'Darryldecode\Backend\Components\User\Models\User',
+    'content_model' => 'App\Backend\Extensions\ContentExtended', // <-- your new Content Model
+</code></pre>
+    <p><b>VOILA!</b> You have now full control of your Content's Model! When querying content, you can now add querying its relations like so,</p>
+<pre><code data-language="php">
+$result = $this->dispatchFromArray(
+    'Darryldecode\Backend\Components\ContentBuilder\Commands\QueryContentsCommand',
+    array(
+        'type' => 'blog',
+        'terms' => array(
+        'Size'  => array('small'),
+        'Color' => array('blue','green'),
+        'Availability' => array('yes'),
+        ),
+        'paginated' => true,
+        'status' => 'any',
+        'disablePermissionChecking' => true,
+        'with' => array('newAddedRelation') // <-- query your new relation
+    )
+);
+</code></pre>
 </div>

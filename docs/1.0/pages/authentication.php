@@ -6,7 +6,7 @@
         more convenient to use the built-in commands for ease of use.</p>
 
     <h3>Authenticating a user:</h3>
-    <p>On your controller, you can do this:</p>
+    <p>On your controller:</p>
 <pre><code data-language="php">
 // NOTE:
 // Throttling feature is enabled by default
@@ -40,6 +40,12 @@ $result->isSuccessful(); // check if authentication was successful
 $result->getStatusCode(); // the status code Ex 200, 401
 $result->getMessage(); // the message (success or error)
     </code></pre>
+
+    <h3>Logging out a user:</h3>
+    <p>You can use the typical logout, On your controller:</p>
+<pre><code data-language="php">
+Auth::logout();
+</code></pre>
 
     <h3>Built-in Middleware:</h3>
     <p>On your controller:</p>

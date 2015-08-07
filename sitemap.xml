@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://laravelbackend.com/</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://laravelbackend.com/docs/1.0/?page=introduction.php</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://laravelbackend.com/docs/1.0/?page=content-type-builder-component.php</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://laravelbackend.com/docs/1.0/?page=change-logs.php</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://laravelbackend.com/docs/1.0/?page=installation.php</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://laravelbackend.com/docs/1.0/?page=authentication.php</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://laravelbackend.com/docs/1.0/?page=user-component.php</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://laravelbackend.com/docs/1.0/?page=media-manager.php</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://laravelbackend.com/docs/1.0/?page=navigation-builder.php</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://laravelbackend.com/docs/1.0/?page=component-make.php</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://laravelbackend.com/docs/1.0/?page=widget-make.php</loc>
+  <changefreq>always</changefreq>
+</url>
+</urlset>
