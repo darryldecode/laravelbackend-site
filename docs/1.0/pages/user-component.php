@@ -212,7 +212,7 @@ use Darryldecode\Backend\Components\User\Models\User;
 // your new class, name it whatever you want and just make sure you extent the main User Model
 class UserExtended extends User {
 
-    // your new added relations to the Content Model
+    // your new added relations to the User Model
     public function newAddedRelation() {
         return $this->belongsToMany('anything here..');
     }
