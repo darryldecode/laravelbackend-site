@@ -231,6 +231,20 @@ class UserExtended extends User {
         'user_model'    => 'App\Backend\Extensions\UserExtended', // <-- your new User Model
         'content_model' => 'Darryldecode\Backend\Components\ContentBuilder\Models\Content',
     </code></pre>
+    <p>As well as the Application's used Auth Model. Open <b><i>"config/auth.php"</i></b>:</p>
+<pre><code data-language="php">
+/*
+|--------------------------------------------------------------------------
+| Authentication Model
+|--------------------------------------------------------------------------
+|
+| When using the "Eloquent" authentication driver, we need to know which
+| Eloquent model should be used to retrieve your users. Of course, it
+| is often just the "User" model but you may use whatever you like.
+|
+*/
+'model' => 'App\Backend\Extensions\UserExtended', // <-- your new User Model
+</code></pre>
 
     <p><b>VOILA!</b> You have now full control of your User's Model! When querying user, you can now add querying its relations like so,</p>
 <pre><code data-language="php">
