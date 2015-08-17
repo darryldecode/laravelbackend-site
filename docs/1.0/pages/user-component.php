@@ -147,7 +147,7 @@ $result = $this->dispatchFromArray(
                 'user.delete' => 1,
             ), // (optional) array.
         'groups' => array(
-                1 => true // the ID of the group you want the user to be associated with
+                1 // the ID of the group you want the user to be associated with
             ), // (optional) array.
         'disablePermissionChecking' => true // (required) this is mandatory when a command is used as API
     )
