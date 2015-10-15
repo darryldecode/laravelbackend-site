@@ -1,4 +1,11 @@
 <div class="documentation-page-content">
+    <h3>REQUIREMENTS:</h3>
+    <ul>
+        <li>PHP >= 5.5.9</li>
+        <li>Laravel 5.1 or greater</li>
+    </ul>
+
+    <h3>INSTALLATION GUIDE:</h3>
     <div class="alert alert-info">
         <h2><i class="fa fa-warning"></i> IMPORTANT!</h2>
         <ul>
