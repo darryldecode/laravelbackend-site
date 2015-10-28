@@ -259,16 +259,16 @@ $result = $this->dispatchFromArray(
 
 
     <h3 id="user-object">User Object Available Methods</h3>
-    <p>There are different ways to user object:</p>
+    <p>There are different ways to get user object:</p>
     <p>First, using the typical Laravel Version of getting the current logged in user:</p>
 <pre><code data-language="php">
 $User = \Auth::user();
 </code></pre>
-    <p>Second, is in your controller that extends the <i>\Darryldecode\Backend\Base\Controllers\BaseController</i>,
+    <p>Second, is in your controller that extends the <i><b>\Darryldecode\Backend\Base\Controllers\BaseController</b></i>,
     you can access the parent user property which contains the current logged in user or false if not logged in.</p>
 <pre><code data-language="php">
 // inside your controller method that extends \Darryldecode\Backend\Base\Controllers\BaseController
-$User = $this->user;
+$User = $this->user; // returns false if not logged in
 </code></pre>
     <p>Third, is just by querying a user:</p>
 <pre><code data-language="php">
