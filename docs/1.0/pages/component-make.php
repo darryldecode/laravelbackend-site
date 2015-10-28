@@ -18,7 +18,7 @@
     Example of a component is a <b>USER COMPONENT</b>, <b>E-COMMERCE COMPONENT</b> or anything your application may need.
         In Laravel Backend, a component is used to separate domains or specific functionality for easy code maintenance
         and having clear separations of concerns.</p>
-    <p>When building a custom component, it will have its own directory, and will have its own MVC.</p>
+    <p>When building a custom component, it will have its own directory, and will have its own MVVM|MVC.</p>
     <br>
     <h4>So let's begin building our first custom component:</h4>
     <ul>
@@ -262,5 +262,4 @@ Route::get('/artists-manager', array(
 ));
 </code></pre>
     <p>All the routes here will be relative to backend base route.</p>
-
 </div>

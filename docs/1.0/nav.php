@@ -31,5 +31,8 @@
                 <li><a href="?page=widget-make.php">Build your own widget</a></li>
             </ul>
         </li>
+        <li>
+            <a href="?page=ui-stack.php"><b>THE UI STACK</b></a>
+        </li>
     </ul>
 </div>

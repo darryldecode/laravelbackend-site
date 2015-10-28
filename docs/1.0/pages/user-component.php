@@ -15,6 +15,7 @@
                 <li><a href="" class="go-to" data-go-to="extending">Extending User Model</a></li>
             </ul>
         </li>
+        <li><a href="" class="go-to" data-go-to="user-object">User Object Available Methods</a></li>
     </ul>
 
     <br>
@@ -254,5 +255,63 @@ $result = $this->dispatchFromArray(
         'with' => array('newAddedRelation'), // <-- include your new relation
     )
 );
+</code></pre>
+
+
+    <h3 id="user-object">User Object Available Methods</h3>
+    <p>There are different ways to user object:</p>
+    <p>First, using the typical Laravel Version of getting the current logged in user:</p>
+<pre><code data-language="php">
+$User = \Auth::user();
+</code></pre>
+    <p>Second, is in your controller that extends the <i>\Darryldecode\Backend\Base\Controllers\BaseController</i>,
+    you can access the parent user property which contains the current logged in user or false if not logged in.</p>
+<pre><code data-language="php">
+// inside your controller method that extends \Darryldecode\Backend\Base\Controllers\BaseController
+$User = $this->user;
+</code></pre>
+    <p>Third, is just by querying a user:</p>
+<pre><code data-language="php">
+$result = $this->dispatchFromArray(
+    'Darryldecode\Backend\Components\User\Commands\QueryUsersCommand',
+    array(
+        'id' => '', // (required) int
+        'with' => array('groups'), // (optional) array.
+    )
+);
+
+$UserObject = $result->getData();
+</code></pre>
+
+    <h5>Check if User belongs to a specific group:</h5>
+<pre><code data-language="php">
+$group = 1; // using group ID
+$group = 'members'; // or using group name
+$group = $GroupObject; // or the group object
+
+$UserObject->inGroup($group); // returns true or false
+</code></pre>
+
+    <h5>Check if User has the given permission:</h5>
+<pre><code data-language="php">
+// check if user has this permission
+$permission = 'blog.create';
+
+$UserObject->hasPermission($permission); // returns true or false
+
+// or a set of any of this permissions
+$permissions = array('blog.create','blog.delete');
+
+$UserObject->hasAnyPermission($permissions); // returns true or false
+</code></pre>
+
+    <h5>Check if User is a superuser:</h5>
+<pre><code data-language="php">
+$UserObject->isSuperUser(); // returns true or false
+</code></pre>
+
+    <h5>Get User's combined permissions. This will include permission acquired from its group and its specific given permissions:</h5>
+<pre><code data-language="php">
+$UserObject->getCombinedPermissions(); // returns array of permissions
 </code></pre>
 </div>
