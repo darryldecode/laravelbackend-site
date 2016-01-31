@@ -9,7 +9,7 @@
     <meta name="description" content="Laravel Backend - Lite and lean backend for laravel.">
     <meta name="keywords" content="laravelbackend, laravel, laravel admin package, laravel backend package, php, framework, web, artisans, darryl fernandez">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Version 1.0.x Documentation | LARAVEL BACKEND</title>
+    <title>Version 2.0.x Documentation | LARAVEL BACKEND</title>
 
     <!-- Bootstrap -->
     <link href="../../plugins/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">

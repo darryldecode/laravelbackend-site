@@ -2,7 +2,7 @@
     <h3>REQUIREMENTS:</h3>
     <ul>
         <li>PHP >= 5.5.9</li>
-        <li>Laravel 5.1.x</li>
+        <li>Laravel 5.2.x</li>
     </ul>
 
     <h3>INSTALLATION GUIDE:</h3>
@@ -21,7 +21,7 @@
             <p>On your composer.json, add this on require block:</p>
             <pre>
 "require": {
-        "darryldecode/laravelbackend": "~1.0"
+        "darryldecode/laravelbackend": "~2.0"
     }
             </pre>
             <p>then you can do: <pre>composer update "darryldecode/laravelbackend"</pre> to update/install the package</p>
@@ -62,19 +62,36 @@ php artisan db:seed --class=BackendSeeder
 
         <li class="installation-step">
             <h4>STEP 5:</h4>
-            <p>on config/auth.php (changed your model to:)</p>
-            <pre><code data-language="php">'Darryldecode\Backend\Components\User\Models\User'</code></pre>
+            <p>on config/auth.php (changed your users model to:)</p>
+            <pre><code data-language="php">
+'providers' => [
+    'users' => [
+    'driver' => 'eloquent',
+    'model' => Darryldecode\Backend\Components\User\Models\User::class, // <---- change to this
+],
+                </code></pre>
+            <p>on config/auth.php (changed your passwords.users.email value to: "backend.auth.email-link")</p>
+            <pre><code data-language="php">
+'passwords' => [
+    'users' => [
+        'provider' => 'users',
+        'email' => 'backend.auth.email-link', // <---- change to this
+        'table' => 'password_resets',
+        'expire' => 60,
+    ],
+],
+                </code></pre>
             <p>on config/filesystems.php (changed the local disks:)</p>
             <pre><code data-language="php">
-    'root'   => storage_path('app'),
-        to:
-    'root'   => public_path('uploads'),
-            </code></pre>
+'root'   => storage_path('app'),
+to:
+'root'   => public_path('uploads'),
+                </code></pre>
             <p>on app/Console/Kernel.php (add this on the $commands property array, this will enable package's built in consoles)</p>
             <pre><code data-language="php">
 \Darryldecode\Backend\Base\Console\ComponentMake::class,
 \Darryldecode\Backend\Base\Console\WidgetMake::class
-            </code></pre>
+                </code></pre>
         </li>
         <li class="installation-step">
             <h4>CONRGATULATIONS! Your instant laravel 5.1 backend is ready!</h4>

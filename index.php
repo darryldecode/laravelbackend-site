@@ -35,7 +35,8 @@
             <nav id="main-navigation" class="pull-right">
                 <ul>
                     <li><a class="go-to" data-go-to="features" href="#">Features</a></li>
-                    <li><a href="docs/1.0/?page=introduction.php">Docs</a></li>
+                    <li><a href="docs/1.0/?page=introduction.php">Docs 1.0~</a></li>
+                    <li><a href="docs/2.0/?page=introduction.php">Docs 2.0~</a></li>
                     <li><a target="_blank" href="https://github.com/darryldecode/laravelbackend">Github</a></li>
                 </ul>
             </nav>
@@ -45,10 +46,24 @@
         <div class="container">
             <div id="landing-view">
                 <h1 class="text-center">LARAVEL BACKEND</h1>
-                <h3 class="text-center">Boost your Laravel 5.1~ Website/Web Application Development by providing lite and lean API-Driven backend.</h3>
-                <div class="text-center">
-                    <div style="width: 450px;margin: 0 auto;">
-<pre><code data-language="php">composer require darryldecode/laravelbackend:~1.0</code></pre>
+                <h3 class="text-center">Boost your Laravel 5.x~ Website/Web Application Development by providing lite and lean API-Driven backend.</h3>
+                <br>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="text-center">
+                            <h5>FOR LARAVEL 5.1~</h5>
+                            <div style="width: 450px;margin: 0 auto;">
+                                <pre><code data-language="php">composer require darryldecode/laravelbackend:~1.0</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="text-center">
+                            <h5>FOR LARAVEL 5.2~</h5>
+                            <div style="width: 450px;margin: 0 auto;">
+                                <pre><code data-language="php">composer require darryldecode/laravelbackend:~2.0</code></pre>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div id="browser">
