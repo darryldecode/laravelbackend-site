@@ -34,7 +34,7 @@
 
     <div class="row big-title">
         <div class="container">
-            1.0 DOCUMENTATION
+            2.0 DOCUMENTATION
         </div>
     </div>
 
