@@ -11,7 +11,9 @@
 // NOTE:
 // Throttling feature is enabled by default
 
-$result = $this->dispatchFromArray(
+$commandDispatcher = app('Darryldecode\Backend\Base\Contracts\Bus\Dispatcher');
+
+$result = $commandDispatcher->dispatchFromArray(
     'Darryldecode\Backend\Components\Auth\Commands\AuthenticateCommand',
     array(
         'email' => 'admin@gmail.com',

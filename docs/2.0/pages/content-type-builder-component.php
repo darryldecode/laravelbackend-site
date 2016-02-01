@@ -76,7 +76,9 @@
     <h3 id="query-contents">Query Contents</h3>
     <p>On your controller, you can do this:</p>
     <pre><code data-language="php">
-$result = $this->dispatchFromArray(
+$commandDispatcher = app('Darryldecode\Backend\Base\Contracts\Bus\Dispatcher');
+
+$result = $commandDispatcher->dispatchFromArray(
     'Darryldecode\Backend\Components\ContentBuilder\Commands\QueryContentsCommand',
     array(
         'type' => 'blog', // the content type. This can be string or int(id)
@@ -113,8 +115,10 @@ $result->getMessage(); // the message (success or error)
     <h3 id="query-single-content">Query Single Content</h3>
     <p>On your controller, you can do this:</p>
     <pre><code data-language="php">
+$commandDispatcher = app('Darryldecode\Backend\Base\Contracts\Bus\Dispatcher');
+
 // by ID
-$result = $this->dispatchFromArray(
+$result = $commandDispatcher->dispatchFromArray(
     'Darryldecode\Backend\Components\ContentBuilder\Commands\QueryContentCommand',
     array(
         'id' => 1,
@@ -124,7 +128,7 @@ $result = $this->dispatchFromArray(
 );
 
 // by slug
-$result = $this->dispatchFromArray(
+$result = $commandDispatcher->dispatchFromArray(
     'Darryldecode\Backend\Components\ContentBuilder\Commands\QueryContentCommand',
     array(
         'slug' => 'some-entry-2',
@@ -134,7 +138,7 @@ $result = $this->dispatchFromArray(
 );
 
 // by title match
-$result = $this->dispatchFromArray(
+$result = $commandDispatcher->dispatchFromArray(
     'Darryldecode\Backend\Components\ContentBuilder\Commands\QueryContentCommand',
     array(
         'title' => 'Some Title',
@@ -151,7 +155,9 @@ $result->getMessage(); // the message (success or error)
 
     <h3 id="create-content">Create Content</h3>
     <pre><code data-language="php">
-$result = $this->dispatchFromArray(
+$commandDispatcher = app('Darryldecode\Backend\Base\Contracts\Bus\Dispatcher');
+
+$result = $commandDispatcher->dispatchFromArray(
     'Darryldecode\Backend\Components\ContentBuilder\Commands\CreateContentCommand',
     array(
         'title' => 'Sample Content', // (required) string.
@@ -180,7 +186,9 @@ $result = $this->dispatchFromArray(
     <h3 id="update-content">Update Content</h3>
     <pre><code data-language="php">
 // When updating, you may just provide only the fields you want to update
-$result = $this->dispatchFromArray(
+$commandDispatcher = app('Darryldecode\Backend\Base\Contracts\Bus\Dispatcher');
+
+$result = $commandDispatcher->dispatchFromArray(
     'Darryldecode\Backend\Components\ContentBuilder\Commands\UpdateContentCommand',
     array(
         'id' => 1, // (required)
@@ -209,7 +217,9 @@ $result = $this->dispatchFromArray(
 
     <h3 id="delete-content">Delete Content</h3>
     <pre><code data-language="php">
-$result = $this->dispatchFromArray(
+$commandDispatcher = app('Darryldecode\Backend\Base\Contracts\Bus\Dispatcher');
+
+$result = $commandDispatcher->dispatchFromArray(
     'Darryldecode\Backend\Components\ContentBuilder\Commands\DeleteContentCommand',
     array(
         'id' => $id, // (required) int.

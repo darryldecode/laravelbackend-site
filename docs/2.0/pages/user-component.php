@@ -97,7 +97,9 @@
     <h3 id="query-users">Query Users with or without parameters</h3>
     <p>On your controller, you can do this:</p>
     <pre><code data-language="php">
-$result = $this->dispatchFromArray(
+$commandDispatcher = app('Darryldecode\Backend\Base\Contracts\Bus\Dispatcher');
+
+$result = $commandDispatcher->dispatchFromArray(
     'Darryldecode\Backend\Components\User\Commands\QueryUsersCommand',
     array(
         'firstName' => '', // (optional) string
@@ -120,7 +122,9 @@ $result->getMessage(); // the message (success or error)
 
     <h3 id="query-user">Display single user</h3>
     <pre><code data-language="php">
-$result = $this->dispatchFromArray(
+$commandDispatcher = app('Darryldecode\Backend\Base\Contracts\Bus\Dispatcher');
+
+$result = $commandDispatcher->dispatchFromArray(
 'Darryldecode\Backend\Components\User\Commands\QueryUsersCommand',
     array(
         'id' => '', // (required) int
@@ -136,7 +140,9 @@ $result->getMessage(); // the message (success or error)
 
     <h3 id="creating-a-user">CREATING A USER:</h3>
     <pre><code data-language="php">
-$result = $this->dispatchFromArray(
+$commandDispatcher = app('Darryldecode\Backend\Base\Contracts\Bus\Dispatcher');
+
+$result = $commandDispatcher->dispatchFromArray(
     'Darryldecode\Backend\Components\User\Commands\CreateUserCommand',
     array(
         'firstName' => 'John', // (required) string.
@@ -157,8 +163,10 @@ $result = $this->dispatchFromArray(
 
     <h3 id="updating-a-user">UPDATING A USER:</h3>
     <pre><code data-language="php">
+$commandDispatcher = app('Darryldecode\Backend\Base\Contracts\Bus\Dispatcher');
+
 // When updating, you can provide only the fields you want to update
-$result = $this->dispatchFromArray(
+$result = $commandDispatcher->dispatchFromArray(
     'Darryldecode\Backend\Components\User\Commands\UpdateUserCommand',
     array(
         'firstName' => 'John', // (optional) string.
@@ -179,7 +187,9 @@ $result = $this->dispatchFromArray(
 
     <h3 id="deleting-a-user">DELETING A USER:</h3>
     <pre><code data-language="php">
-$result = $this->dispatchFromArray(
+$commandDispatcher = app('Darryldecode\Backend\Base\Contracts\Bus\Dispatcher');
+
+$result = $commandDispatcher->dispatchFromArray(
     'Darryldecode\Backend\Components\User\Commands\DeleteUserCommand',
     array(
         'id' => $userId,
@@ -249,7 +259,9 @@ class UserExtended extends User {
 
     <p><b>VOILA!</b> You have now full control of your User's Model! When querying user, you can now add querying its relations like so,</p>
 <pre><code data-language="php">
-$result = $this->dispatchFromArray(
+$commandDispatcher = app('Darryldecode\Backend\Base\Contracts\Bus\Dispatcher');
+
+$result = $commandDispatcher->dispatchFromArray(
     'Darryldecode\Backend\Components\User\Commands\QueryUsersCommand',
     array(
         'with' => array('newAddedRelation'), // <-- include your new relation
@@ -272,7 +284,9 @@ $User = $this->user; // returns false if not logged in
 </code></pre>
     <p>Third, is just by querying a user:</p>
 <pre><code data-language="php">
-$result = $this->dispatchFromArray(
+$commandDispatcher = app('Darryldecode\Backend\Base\Contracts\Bus\Dispatcher');
+
+$result = $commandDispatcher->dispatchFromArray(
     'Darryldecode\Backend\Components\User\Commands\QueryUsersCommand',
     array(
         'id' => '', // (required) int

@@ -11,7 +11,9 @@
     <h3>Query Navigation By ID:</h3>
     <p>On your controller, you can do this:</p>
 <pre><code data-language="php">
-$result = $this->dispatchFromArray(
+$commandDispatcher = app('Darryldecode\Backend\Base\Contracts\Bus\Dispatcher');
+
+$result = $commandDispatcher->dispatchFromArray(
     'Darryldecode\Backend\Components\Navigation\Commands\ListCustomNavigationCommand',
     array(
         'id' => 1, // (required) int.
