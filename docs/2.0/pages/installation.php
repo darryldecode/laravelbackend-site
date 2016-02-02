@@ -110,3 +110,7 @@ to:
         <iframe src="https://drive.google.com/file/d/0B9dCEjZYeYd6NXJUcUc2YW11Zms/preview" width="640" height="480"></iframe>
     </div>
 </div>
+
+<div class="alert alert-warning">
+    More documentation coming soon or you may help us improve the docs by making pull request here: <a target="_blank" href="https://github.com/darryldecode/laravelbackend-site">https://github.com/darryldecode/laravelbackend-site</a>
+</div>

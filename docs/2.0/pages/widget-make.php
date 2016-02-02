@@ -32,3 +32,7 @@
         </li>
     </ul>
 </div>
+
+<div class="alert alert-warning">
+    More documentation coming soon or you may help us improve the docs by making pull request here: <a target="_blank" href="https://github.com/darryldecode/laravelbackend-site">https://github.com/darryldecode/laravelbackend-site</a>
+</div>

@@ -1,5 +1,3 @@
 <div class="documentation-page-content">
-    <ul>
-        <li>Version 1.0 - Initial Release (Alpha)</li>
-    </ul>
+    Please refer changes on every release here: <a target="_blank" href="https://github.com/darryldecode/laravelbackend/releases">https://github.com/darryldecode/laravelbackend/releases</a>
 </div>
