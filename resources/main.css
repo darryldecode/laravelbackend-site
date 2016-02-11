@@ -50,6 +50,12 @@ input, textarea, select {
     padding: 5px;
     font-size: 1.2em;
 }
+#main-navigation ul li.active {
+    background-color: #FB503B;
+}
+#main-navigation ul li.active a {
+    color: #ffffff;
+}
 
 /* FRONT PAGE */
 #landing-view h1 {
