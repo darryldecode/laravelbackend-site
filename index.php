@@ -94,7 +94,7 @@
                 </div>
             </div>
 
-            <h3 class="text-center"><a href="docs/1.0/?page=content-type-builder-component.php">learn more about content builder →</a></h3>
+            <h3 class="text-center"><a href="docs/2.0/?page=content-type-builder-component.php">learn more about content builder →</a></h3>
         </div>
     </div>
 
@@ -165,13 +165,13 @@
             </div>
             <br>
             <br>
-            <h3 class="text-center"><a href="docs/1.0/?page=introduction.php">and more..</a></h3>
+            <h3 class="text-center"><a href="docs/2.0/?page=introduction.php">and more..</a></h3>
         </div>
     </div>
 
     <div class="row" id="go-to-docs">
         <div class="container text-center">
-            <a href="docs/1.0/?page=introduction.php" class="btn btn-primary btn-lg">Get Started Now <i class="fa fa-angle-double-right"></i></a>
+            <a href="docs/2.0/?page=introduction.php" class="btn btn-primary btn-lg">Get Started Now <i class="fa fa-angle-double-right"></i></a>
         </div>
     </div>
 
