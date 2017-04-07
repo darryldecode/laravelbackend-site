@@ -46,6 +46,7 @@
                 </div>
                 <div class="col-lg-9">
                     <div class="documentation-right">
+                        <div class="alert alert-info">NOTE: This version is in active development.</div>
                         <?php $page = isset($_GET['page']) ? $_GET['page'] : false; ?>
 
                         <?php if( ! $page ): ?>
