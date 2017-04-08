@@ -18,13 +18,9 @@
 
         <li class="installation-step">
             <h4>STEP 1:</h4>
-            <p>On your composer.json, add this on require block:</p>
             <pre>
-"require": {
-        "darryldecode/laravelbackend": "~3.0"
-    }
+composer require darryldecode/laravelbackend:~3.0
             </pre>
-            <p>then you can do: <pre>composer update "darryldecode/laravelbackend"</pre> to update/install the package</p>
         </li>
 
         <li class="installation-step">
