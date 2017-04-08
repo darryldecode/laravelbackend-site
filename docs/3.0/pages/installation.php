@@ -54,6 +54,12 @@ Darryldecode\Backend\BackendRoutesServiceProvider::class,
 php artisan migrate
 php artisan db:seed --class=BackendSeeder
             </code></pre>
+            NOTE: If you encounter this kind of error while doing 'php artisan migrate'. (this is because of Laravel using newer versions of MySQL features):
+            <img src="/resources/images/migrate_error.png">
+            Open AppServiceProvider found in 'app/Providers/AppServiceProvider.php' and in <b>boot()</b> method add:
+            <pre><code data-language="php">
+\Schema::defaultStringLength(191);
+            </code></pre>
         </li>
 
         <li class="installation-step">
