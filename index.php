@@ -52,25 +52,25 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <div class="text-center">
+                            <h5>FOR LARAVEL 5.4~</h5>
+                            <div style="width: 450px;margin: 0 auto;">
+                                <pre><code data-language="php">composer require darryldecode/laravelbackend:~3.0</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="text-center">
                             <h5>FOR LARAVEL 5.1~</h5>
                             <div style="width: 450px;margin: 0 auto;">
                                 <pre><code data-language="php">composer require darryldecode/laravelbackend:~1.0</code></pre>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-12 col-md-12">
+                    <div class="col-lg-6 col-md-12">
                         <div class="text-center">
                             <h5>FOR LARAVEL 5.2~</h5>
                             <div style="width: 450px;margin: 0 auto;">
                                 <pre><code data-language="php">composer require darryldecode/laravelbackend:~2.0</code></pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12">
-                        <div class="text-center">
-                            <h5>FOR LARAVEL 5.4~</h5>
-                            <div style="width: 450px;margin: 0 auto;">
-                                <pre><code data-language="php">composer require darryldecode/laravelbackend:~3.0</code></pre>
                             </div>
                         </div>
                     </div>
