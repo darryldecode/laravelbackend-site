@@ -95,6 +95,9 @@
         more convenient to use the built-in commands for ease of query.</p>
 
     <h3 id="query-users">Query Users with or without parameters</h3>
+    <p class="alert alert-info">NOTE: When using the commands publicly and you get permission errors, put this on your parameters to
+    bypass the permission checking.</p>
+    <pre>'disablePermissionChecking' => true</pre>
     <p>On your controller, you can do this:</p>
     <pre><code data-language="php">
 $commandDispatcher = app('Darryldecode\Backend\Base\Contracts\Bus\Dispatcher');
@@ -111,6 +114,7 @@ $result = $commandDispatcher->dispatchFromArray(
         'paginated' => true, // (optional) boolean. Default: true
         'perPage' => 15, // (optional) int. Default: 15
         'with' => array('groups'), // (optional) array.
+        'disablePermissionChecking' => true // (required) this is mandatory when a command is used as API
     )
 );
 
@@ -129,6 +133,7 @@ $result = $commandDispatcher->dispatchFromArray(
     array(
         'id' => '', // (required) int
         'with' => array('groups'), // (optional) array.
+        'disablePermissionChecking' => true // (required) this is mandatory when a command is used as API
     )
 );
 

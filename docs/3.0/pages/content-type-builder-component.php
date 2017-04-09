@@ -72,6 +72,9 @@
     <h3>API:</h3>
     <p>The best way to query contents is to use the commands. You can use the raw Eloquent query but its
     more convenient to use the built-in commands for ease of query.</p>
+    <p class="alert alert-info">NOTE: When using the commands publicly and you get permission errors, put this on your parameters to
+        bypass the permission checking.</p>
+    <pre>'disablePermissionChecking' => true</pre>
 
     <h3 id="query-contents">Query Contents</h3>
     <p>On your controller, you can do this:</p>
